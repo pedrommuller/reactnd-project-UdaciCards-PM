@@ -11,10 +11,9 @@ npm install
 ```sh
 npm start
 ```
-```sh
+
 This application need any android or iOS emulator to be able to run,
 and also this tool relies on [expo](https://expo.io/) to run and deploy.
 
-```
 
 **The purpose of this project is to demonstrate the skills learned during the training**
