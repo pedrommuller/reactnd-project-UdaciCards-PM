@@ -12,7 +12,8 @@ npm install
 npm start
 ```
 ```sh
-This application need any android or iOS emulator to be able to run, this tool relies on [expo](https://expo.io/) to run and deploy.
+This application need any android or iOS emulator to be able to run,
+and also this tool relies on [expo](https://expo.io/) to run and deploy.
 
 ```
 
