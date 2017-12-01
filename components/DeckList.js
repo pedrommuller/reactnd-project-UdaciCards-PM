@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 
 class DeckList extends React.Component {
   render() {
+    console.log(this.props);
     const decks = this.props.decks;
     const { navigate } = this.props.navigation;
     return (
@@ -29,10 +30,5 @@ class DeckList extends React.Component {
   }
 }
 
-function mapStateToProps(state){
-  return {
-    decks:state.decks
-  }
-}
-
-export default connect(mapStateToProps)(DeckList)
+const mapStateToProps = ({decks}) => ({decks});
+export default connect(mapStateToProps)(DeckList);

@@ -50,10 +50,5 @@ class DeckDetail extends React.Component {
   }
 }
 
-function mapStateToProps(state){
-  return {
-    decks:state.decks
-  }
-}
-
+const mapStateToProps = ({decks}) => ({decks});
 export default connect(mapStateToProps)(DeckDetail)

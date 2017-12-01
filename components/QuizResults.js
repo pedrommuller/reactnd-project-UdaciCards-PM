@@ -3,8 +3,6 @@ import { View } from 'react-native';
 import { Card, Button, Text } from 'react-native-elements';
 
 export default class QuizResults extends React.Component {
-
-
   render() {
     const { key, correct, total } = this.props.navigation.state.params;
     const { navigate } = this.props.navigation;
@@ -30,7 +28,6 @@ export default class QuizResults extends React.Component {
           icon = {{name: 'check', type:'font-awesome'}}
           title='Back to Deck' onPress={()=>{ navigate('EntryDetail',{key:key}) }}
         />
-
       </Card>
     );
   }

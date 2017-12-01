@@ -1,5 +1,9 @@
 This is the final assessment project for Udacity's React [Nanodegree](https://www.udacity.com/course/react-nanodegree--nd019), developed by [React Training](https://reacttraining.com). The goal of this project is to demonstrate the skills learned during the course, this project focuses on the usage of react native.
 
+##Libraries
+The libraries are pretty standard for a react native application, for styling decided to use:
+[react native elements UI Toolkit](https://react-native-training.github.io/)
+
 ## Installation
 
 This project requires node and [npm](https://www.npmjs.com/) to run, once in the root folder of the application you have to do:

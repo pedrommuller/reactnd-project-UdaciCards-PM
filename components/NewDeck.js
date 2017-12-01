@@ -33,12 +33,10 @@ class NewDeck extends React.Component {
           this.setState({title:text})
         }} value = {this.state.title} />
         {
-          this.state.title==='' &&
+          this.state.title ==='' &&
           <FormValidationMessage>
             Title is required
           </FormValidationMessage>
-
-
         }
         <Button
           large
@@ -50,7 +48,10 @@ class NewDeck extends React.Component {
             }
             if(this.state.title!=='' ){
               this.props.actions.addDeck(this.state.title);
-              navigate('DeckList');
+              this.setState({
+                title:''
+              });
+              navigate('EntryDetail',{ key: this.state.title });
             }
           }}  />
       </View>
@@ -58,17 +59,8 @@ class NewDeck extends React.Component {
   }
 }
 
-
-function mapDispatchToProps(dispatch) {
-  return {
-    actions:bindActionCreators({...actions}, dispatch)
-  }
-}
-
-function mapStateToProps(state){
-  return {
-    decks:state.decks
-  }
-}
-
+const mapDispatchToProps = (dispatch) => (
+  {actions:bindActionCreators({...actions}, dispatch)}
+)
+const mapStateToProps = ({decks}) => ({decks});
 export default connect(mapStateToProps, mapDispatchToProps)(NewDeck)

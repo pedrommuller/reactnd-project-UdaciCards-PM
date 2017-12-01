@@ -78,16 +78,8 @@ class NewCard extends React.Component {
   }
 }
 
-function mapDispatchToProps(dispatch) {
-  return {
-    actions:bindActionCreators({...actions}, dispatch)
-  }
-}
-
-function mapStateToProps(state){
-  return {
-    decks:state.decks
-  }
-}
-
+const mapDispatchToProps = (dispatch) => (
+  {actions:bindActionCreators({...actions}, dispatch)}
+)
+const mapStateToProps = ({decks}) => ({decks});
 export default connect(mapStateToProps, mapDispatchToProps)(NewCard)
